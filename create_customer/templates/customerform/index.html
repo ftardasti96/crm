@@ -30,6 +30,26 @@
                             <label for="{{ form.last_name.id_for.label }}">Last name</label>
                             {{ form.last_name }}
                         </div>
+                        <div class="fieldWrapper">
+                            {{ form.email.errors }}
+                            <label for="{{ form.email.id_for.label }}">Email</label>
+                            {{ form.email }}
+                        </div>
+                        <div class="fieldWrapper">
+                            {{ form.phone.errors }}
+                            <label for="{{ form.phone.id_for.label }}">Phone</label>
+                            {{ form.phone }}
+                        </div>
+                        <div class="fieldWrapper">
+                            {{ form.address.errors }}
+                            <label for="{{ form.address.id_for.label }}">Address</label>
+                            {{ form.address }}
+                        </div>
+                        <div class="fieldWrapper">
+                            {{ form.description.errors }}
+                            <label for="{{ form.description.id_for.label }}">Description</label>
+                            {{ form.description }}
+                        </div>
                         <button type="submit" class="btn btn-danger m-4">submit</button>
                     </form>
                 </div>
