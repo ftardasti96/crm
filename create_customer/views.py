@@ -38,4 +38,5 @@ def delete_customer(request, pk):
 
 def update_customer(request,pk):
     user = PersonalData.objects.get(pk=pk)
-    
+    return render(request, 'customerform/index.html', {'user': user})
+
