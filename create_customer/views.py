@@ -32,4 +32,10 @@ def delete_customer(request, pk):
     user = PersonalData.objects.get(pk=pk)
     user.delete()
     name = PersonalData.objects.all()
-    return render(request, 'list/all.html', {'name': name})
+    # return render(request, 'list/all.html', {'name': name})
+    return redirect('http://localhost:8000/list')
+
+
+def update_customer(request,pk):
+    user = PersonalData.objects.get(pk=pk)
+    
