@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'list/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        {% if user %}
+        <table class="table mt-3">
+            <thead class="mytable">
+                <tr>
+                    <th>Personal Data</th>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h4>first name</h4>
+                    </td>
+                    <td>
+                        <h6>{{user.first_name}}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>last name</h4>
+                    </td>
+                    <td>
+                        <h6>{{user.last_name}}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Telephon number</h4>
+                    </td>
+                    <td>
+                        <h6>{{user.phone}}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Email Address</h4>
+                    </td>
+                    <td>
+                        <h6>{{user.email}}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4> Address</h4>
+                    </td>
+                    <td>
+                        <h6>{{user.addres}}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>توضیحات</h4>
+                    </td>
+                    <td>
+                        <h6>{{user.description}}</h6>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

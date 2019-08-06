@@ -17,7 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from create_customer import views
 
+app_name = 'customer'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/',views.home),
     path('create/',views.new_customer),
+    path('list/',views.list,name='list'),
+    path('list/<int:pk>/',views.detail,name='detail')
 ]

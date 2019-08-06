@@ -19,6 +19,6 @@ def list(request):
     return render(request,'list/all.html',{'name':name})
 
 
-def detail(request,user_id):
-    user = PersonalData.objects.get(pk=user_id)
+def detail(request,pk):
+    user = PersonalData.objects.get(pk=pk)
     return render(request,'list/detail.html',{'user':user})

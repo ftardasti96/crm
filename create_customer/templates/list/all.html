@@ -13,7 +13,7 @@
 
 <body>
     <div class="container">
-        <table class="table mt-3">
+        <table class="table mt-3 table-striped">
             <thead class="mytable">
                 <tr>
                     <th scope="col">#</th>
@@ -30,7 +30,7 @@
                     <td>{{ user.first_name }}</td>
                     <td>{{ user.last_name }}</td>
                     <td>
-                        <a href="#" class="btn btn-info">view</a>
+                        <a href="{{ user.id }}" class="btn btn-info">view</a>
                         <a href="#" class="btn btn-danger">delete</a>
                     </td>
                 </tr>
